@@ -5,7 +5,7 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "articles#index"
-  resources :crimes, except: %i[destroy update edit] do
+  resources :crimes do
     resources :bookings, only: %i[new create]
   end
   resources :bookings, only: [:index] # index is our dashboard

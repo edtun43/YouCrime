@@ -1,0 +1,6 @@
+<h1>Crimes</h1>
+<ul>
+  <% @crimes.each do |crime| %>
+    <li><%= "#{crime.category}, #{crime.description}" %></li>
+  <% end %>
+</ul>

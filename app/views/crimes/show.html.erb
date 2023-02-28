@@ -1,7 +1,11 @@
-<div class="card-product">
-  <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
-  <div class="card-product-infos">
-    ><%= @crime.category %>
+
+<div class="container-card-info container bg-dark p-3 text-light">
+    <h2 class="text-break"><%= @crime.category %></h2>
     <p><%= @crime.description %> <%= "$" %><%= (@crime.price) %>.</p>
+
+
+  <div class="card-info" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1476370648495-3533f64427a2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTV8fGRhcmt8ZW58MHx8MHx8&w=1000&q=80)">
   </div>
+
+
 </div>

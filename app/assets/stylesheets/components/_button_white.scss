@@ -1,0 +1,16 @@
+.btn-white {
+  color: #dfdfdf;
+  border: 1px solid #dfdfdf;
+  padding: 8px 24px;
+  border-radius: 16px;
+  font-weight: lighter;
+  opacity: 0.6;
+  transition: 0,3s ease;
+}
+
+.btn-white:hover {
+  box-shadow: 4px 8px 8px rgba(109, 109, 109, 0.8);
+  color: #dfdfdf;
+  border: 1px solid #dfdfdf;
+  opacity: 0.6;
+}

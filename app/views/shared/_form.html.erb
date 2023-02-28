@@ -1,0 +1,6 @@
+<%= simple_form_for(@crime) do |f| %>
+  <%= f.select :category, options_for_select(%w[Murder Theft Sabotage Assault]) %>
+  <%= f.input :description %>
+  <%= f.input :price %>
+  <%= f.submit %>
+<% end %>

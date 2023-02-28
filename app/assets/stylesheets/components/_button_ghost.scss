@@ -1,0 +1,17 @@
+.btn-ghost {
+  color: #dfdfdf;
+  border: 1px solid #dfdfdf;
+  padding: 8px 24px;
+  border-radius: 16px;
+  font-weight: lighter;
+  opacity: 0.6;
+  box-shadow: 5px 10px 12px rgba(173, 173, 173, 0.8);
+}
+
+.btn-ghost:hover {
+  background: linear-gradient(90deg, rgb(41, 41, 41) 0%, rgb(173, 173, 173) 100%);
+  box-shadow: 5px 10px 12px rgba(150, 150, 150, 0.8);
+  color: #dfdfdf;
+  border: 1px solid #dfdfdf;
+  opacity: 0.6;
+}

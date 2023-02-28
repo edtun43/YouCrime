@@ -1,6 +1,13 @@
-<%= simple_form_for(@crime) do |f| %>
-  <%= f.select :category, options_for_select(%w[Murder Theft Sabotage Assault]) %>
-  <%= f.input :description %>
-  <%= f.input :price %>
-  <%= f.submit %>
-<% end %>
+<div class="container py-5">
+  <div id="feedback-form">
+    <h2 class="header">Register</h2>
+    <div>
+      <%= simple_form_for(@crime) do |f| %>
+        <%= f.select :category, options_for_select(%w[Murder Theft Sabotage Assault]) %>
+        <%= f.input :description %>
+        <%= f.input :price %>
+        <%= f.submit %>
+      <% end %>
+    </div>
+  </div>
+</div>

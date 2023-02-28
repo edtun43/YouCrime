@@ -5,6 +5,6 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
   has_many :bookings, dependent: :destroy
   has_many :crimes, dependent: :destroy
-  validates :username, uniqueness: true, presence: true
-  validates :username, length: { minimum: 4 }
+  # validates :username, uniqueness: true, presence: true
+  # validates :username, length: { minimum: 4 }
 end

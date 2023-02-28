@@ -1,11 +1,11 @@
 <div class="container py-5">
   <div id="feedback-form">
-    <h2 class="header">Register</h2>
+    <h2 class="header">add a crime</h2>
     <div>
       <%= simple_form_for(@crime) do |f| %>
         <%= f.select :category, options_for_select(%w[Murder Theft Sabotage Assault]) %>
-        <%= f.input :description %>
-        <%= f.input :price %>
+        <%= f.input :description, required: false %>
+        <%= f.input :price, required: false %>
         <%= f.submit %>
       <% end %>
     </div>

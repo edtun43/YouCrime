@@ -7,7 +7,12 @@
 #   Character.create(name: "Luke", movie: movies.first)
 
 Crime.destroy_all
+User.destroy_all
 
-Crime.create(category: "murder", description: "killing someone", price: 180, user_id: 1)
-Crime.create(category: "sabotage", description: "sabotaging a local store", price: 69, user_id: 1)
-puts "created crimes"
+frank = User.create!(email: "frank@gmail.com", password: "password")
+edin = User.create!(email: "edin@gmail.com", password: "password")
+
+Crime.create!(category: "Murder", description: "killing someone", price: 180, user: frank)
+Crime.create!(category: "Sabotage", description: "sabotaging a local store", price: 69, user: edin)
+
+puts "created seeds"

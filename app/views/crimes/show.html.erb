@@ -1,3 +1,7 @@
-<h2><li><%= @crime.category %></li></h2>
-<p><%= @crime.description %></p>
-<p><%= @crime.price %></p>
+<div class="card-product">
+  <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
+  <div class="card-product-infos">
+    ><%= @crime.category %>
+    <p><%= @crime.description %> <%= "$" %><%= (@crime.price) %>.</p>
+  </div>
+</div>

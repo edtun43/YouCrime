@@ -8,7 +8,7 @@
   <div class="cards">
     <% @crimes.each do |crime|%>
       <div class="card-trip mb-3">
-        <%= image_tag("home-Sabotage") %>
+        <%= image_tag("#{crime.category}.jpg") %>
         <div class="card-trip-infos">
           <div>
             <div class="cards-header">
@@ -18,7 +18,6 @@
             <%= crime.price %>
           </div>
           <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" />
-          <%= link_to "more details", crime_path(crime) %>
         </div>
       </div>
     <% end %>

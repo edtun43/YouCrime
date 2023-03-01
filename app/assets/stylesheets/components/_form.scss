@@ -1,11 +1,13 @@
 #crime-form {
   width: 800px;
   margin: 0 auto;
-  background-color: #fcfcfc;
+  background-color: #0E1012;
+  border-radius: 8px;
   padding: 10px 40px 10px;
   // box-shadow: 1px 4px 10px 1px #aaa;
   // font-family: sans-serif;
   text-align: center;
+  color: white;
   // background: #1e1f21
 }
 
@@ -22,17 +24,35 @@
   margin-bottom: 15px;
 }
 
-#crime-form input[type=text] {
+#crime-form input {
   display: block;
   height: 32px;
   padding: 6px 16px;
   width: 100%;
-  border: none;
-  background-color: #f3f3f3;
+  border: 0.5px solid #ffffff;
+  background-color: #0E1012;
+  color: white;
+}
+
+// .right-col input {
+//   border: 0.5px solid #ffffff;
+//   background-color: #0E1012;
+//   color: white;
+// }
+
+.form-control {
+  border: 0.5px solid #ffffff;
+  background-color: #0E1012;
+  color: white;
+
+  &:focus {
+    background-color: #0E1012;
+    color: white;
+  }
 }
 
 #crime-form label {
-  color: #777;
+  color: #ffffff;
   font-size: 0.8em;
   padding-top: 20px;
 }
@@ -101,16 +121,21 @@ select {
   font-size: 12px;
   text-align: left;
   padding: 10px 10px 30px 10px;
-  border: 1px solid #EAEAEA;
+  border: 0.5px solid #ffffff;
   border-radius: 4px;
-  background-color: white;
+  background-color: #0E1012;
   text-align: center;
 }
 
 .category-selector:checked + label {
   color: white !important;
-  background: rgb(75, 75, 99);
-  border-color: rgb(75, 75, 99);
+  background: #3095FE !important;
+  border-color: white;
+}
+
+.category-selector + label:hover {
+  background: #1b1b1b;
+  transition: 0.1s;
 }
 
 .form-input-flex {

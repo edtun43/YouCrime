@@ -6,7 +6,7 @@
 
 .card-trip {
   overflow: hidden;
-  background: #1E1E1E;
+  background-color: #0E1012;;
   width: 100%;
   color: #bdc1c6;
   border-radius: 12px;
@@ -48,11 +48,16 @@
   color: red;
 }
 
-.card-trip-infos .card-trip-user {
-  position: absolute;
-  right: 16px;
-  top: -20px;
-  width: 40px;
+// .card-trip-infos .card-trip-user {
+//   position: absolute;
+//   right: 16px;
+//   top: -20px;
+//   width: 40px;
+// }
+
+.cards-header {
+  display: flex;
+  justify-content: space-between;
 }
 
 // Smallest device

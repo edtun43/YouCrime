@@ -1,5 +1,5 @@
 <div class="container">
-  <h1 class="mt-3">Crimes</h1>
+  <h1 class="my-4">Crimes</h1>
   <%# <ul> %>
     <%# <% @crimes.each do |crime| %>
       <%# <li><%= "#{crime.category}, #{crime.description}"</li> %>
@@ -7,19 +7,24 @@
   <%# </ul> %>
   <div class="cards">
     <% @crimes.each do |crime|%>
-      <div class="card-trip mb-3">
-        <%= image_tag("#{crime.category}.jpg") %>
-        <div class="card-trip-infos">
-          <div>
-            <div class="cards-header">
+      <%= link_to crime_path(crime) do %>
+        <div class="card-trip mb-3">
+          <%= image_tag("#{crime.category}.jpg") %>
+          <div class="card-trip-infos">
+            <div>
               <h2><%= crime.category %></h2>
+              <p><%= crime.bio %></p>
+              <br>
+              <div class="cards-header">
+                <%= "#{crime.price}€" %>
+                <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="avatar-bordered" />
+
+              </div>
             </div>
-            <p><%= crime.description %></p>
-            <%= crime.price %>
+
           </div>
-          <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" />
         </div>
-      </div>
+      <% end %>
     <% end %>
   </div>
 </div>

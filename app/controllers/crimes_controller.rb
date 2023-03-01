@@ -1,8 +1,11 @@
 class CrimesController < ApplicationController
-  before_action :set_crime, only: %i[edit update destroy]
+  before_action :set_crime, only: %i[show edit update destroy]
 
   def index
     @crimes = Crime.all
+  end
+
+  def show
   end
 
   def new

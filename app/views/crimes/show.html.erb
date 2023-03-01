@@ -1,0 +1,25 @@
+<div class="container-card-info bg-dark p-3 text-light r">
+  <div class="card-info" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1476370648495-3533f64427a2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTV8fGRhcmt8ZW58MHx8MHx8&w=1000&q=80)">
+  </div>
+
+  <div class="d-flex">
+    <div class="card-body m-3" >
+      <h2>* * * * * * * * * *</h2>
+      <h2><%= @crime.user.email %></h2>
+      <h2 class="card-title text-light py-2"><%= @crime.category %></h2>
+      <p class="card-text"><%= @crime.description %></p>
+    </div>
+
+    <div class="booking-box p-3 my-3">
+      <p class="card-text text-light m-3"><%= number_to_currency(@crime.price, unit: "$") %></p>
+      <button class="btn btn-primary">Book now</button>
+    </div>
+  </div>
+
+</div>
+
+<!--
+<button class="btn btn-outline-secondary">
+  <i class="fa fa-calendar"></i> Schedule
+</button>
+-->

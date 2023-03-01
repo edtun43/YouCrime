@@ -1,8 +1,8 @@
 <div class="navbar border-bottom shadow p-3 bg-body-tertiary text-center bg-dark">
   <%= link_to 'YouCrime', crimes_path, style: 'text-decoration: none; color: black;' %>
-  <% if (current_user == nil) %>
+  <% if !current_user %>
     <%= link_to 'Login', new_user_session_path, class: 'btn btn-white' %>
-    <% else %>
-      <%= link_to 'Logout', crimes_path, class: 'btn btn-white' %>
+  <% else %>
+    <%= link_to 'Logout', crimes_path, class: 'btn btn-white' %>
   <% end %>
 </div>

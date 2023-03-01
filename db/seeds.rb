@@ -23,7 +23,7 @@ Crime.create!(category: "Murder", name: "Professional and silent", bio: "Lorem i
   tenetur error, harum nesciunt ipsum debitis quas aliquid. Reprehenderit,
   quia. Quo neque error repudiandae fuga? Ipsa laudantium molestias eos
   sapiente officiis modi at sunt excepturi expedita sint? Sed quibusdam
-  recusandae alias error harum maxime adipisci amet laborum.", price: 10.000, user: frank)
+  recusandae alias error harum maxime adipisci amet laborum.", price: 10000, user: frank)
 Crime.create!(category: "Sabotage", name: "subtile changes that change the world", bio: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,
   molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum
   numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium
@@ -33,7 +33,7 @@ Crime.create!(category: "Sabotage", name: "subtile changes that change the world
   tenetur error, harum nesciunt ipsum debitis quas aliquid. Reprehenderit,
   quia. Quo neque error repudiandae fuga? Ipsa laudantium molestias eos
   sapiente officiis modi at sunt excepturi expedita sint? Sed quibusdam
-  recusandae alias error harum maxime adipisci amet laborum.", price: 3.000, user: edin)
+  recusandae alias error harum maxime adipisci amet laborum.", price: 3000, user: edin)
 Crime.create!(category: "Theft", name: "They won't know", bio: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,
   molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum
   numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium

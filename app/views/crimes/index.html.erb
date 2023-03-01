@@ -7,7 +7,7 @@
   <%# </ul> %>
   <div class="cards">
     <% @crimes.each do |crime|%>
-      <%= link_to crime_path(crime) do %>
+      <%= link_to crime_path(crime), style: 'text-decoration: none;' do %>
         <div class="card-trip mb-3">
           <%= image_tag("#{crime.category}.jpg") %>
           <div class="card-trip-infos">

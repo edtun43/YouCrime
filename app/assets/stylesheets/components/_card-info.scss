@@ -9,13 +9,20 @@
   font-size: 24px;
   font-weight: bold;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-  border-radius: 5px;
+  border-radius: 8px;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
 }
 
 
 .container-card-info {
-  width: 75%;
+  width: 1000px;
   margin: auto;
   height: 1000px;
+}
+
+.booking-box {
+  width: 400px;
+  height: 400px;
+  background-color: rgb(17, 16, 16);
+  border-radius: 8px;
 }

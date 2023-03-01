@@ -6,9 +6,15 @@
 
 .card-trip {
   overflow: hidden;
-  background: white;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  background: #1E1E1E;
   width: 100%;
+  color: #bdc1c6;
+  border-radius: 12px;
+}
+
+.card-trip:hover {
+  background: #303030;
+  transition: 0.3s;
 }
 
 .card-trip > img {
@@ -23,14 +29,14 @@
   font-size: 16px;
   font-weight: bold;
   margin: 0;
-  color: black;
+  color: #bdc1c6;
 }
 
 .card-trip p {
   font-size: 12px;
   opacity: .7;
   margin: 0;
-  color: black;
+  color: #bdc1c6;
 }
 
 .card-trip .card-trip-infos {

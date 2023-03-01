@@ -1,11 +1,31 @@
 <div class="container py-5">
-  <div id="feedback-form">
+  <div id="crime-form">
     <h2 class="header">add a crime</h2>
     <div>
       <%= simple_form_for(@crime) do |f| %>
-        <%= f.select :category, options_for_select(%w[Murder Theft Sabotage Assault]) %>
-        <%= f.input :description, required: false %>
-        <%= f.input :price, required: false %>
+        <div class="form-input-flex">
+          <div class="left-col">
+            <div class="name-price-flex">
+              <div class="name-col">
+                <%= f.input :name, required: false %>
+              </div>
+              <div class="price-col">
+                <%= f.input :price, required: false %>
+              </div>
+            </div>
+            <%= f.input :category, required: false,
+                        as: :radio_buttons,
+                        collection_wrapper_tag: 'div',
+                        collection_wrapper_class: 'category-wrapper',
+                        item_wrapper_class: 'category-item',
+                        input_html: {class: 'category-selector'},
+                        collection: %w(Murder Theft Sabotage Assault Whatever Whatever2) %>
+            <%= f.input :bio, required: false, input_html: { class: 'test2', rows: 5 } %>
+          </div>
+          <div class="right-col">
+            <%= f.input :description, required: false, input_html: { class: 'test', cols: 50, rows: 15 } %>
+          </div>
+        </div>
         <%= f.submit %>
       <% end %>
     </div>

@@ -6,4 +6,6 @@ class Crime < ApplicationRecord
   validates :name, presence: true
   validates :bio, presence: true
   validates :price, presence: true
+
+  CATEGORIES = ["Ruby", "JavaScript", "CSS"]
 end

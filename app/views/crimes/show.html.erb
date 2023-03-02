@@ -1,22 +1,35 @@
 <div class="container-card-info">
-  <div class="card-info" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1476370648495-3533f64427a2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTV8fGRhcmt8ZW58MHx8MHx8&w=1000&q=80)">
+  <div class="card-info" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= image_path("#{@crime.category}.jpg") %>')">
   </div>
 
   <div class="info-booking-box">
     <div class="card-body info-booking-box-item" >
-            <h2> Succesful jobs: </h2>
-      <h2><% @crime.progress.times do %>
-        <%= image_tag("Youcrimelogo.jpg", size: "30x30", style: "border-radius: 50%; border: 1px white solid;") %>
-        <% end %>
-      </h2>
-      <h2>Criminal: <%= @crime.user.username %></h2>
-      <h3 class="card-title text-light py-2">Crime category: <%= @crime.category %></h3>
-      <p class="card-text">Bio: <br><%= @crime.bio %></p>
+      <div class="progress-icons">
+        <div class="progress-icons-items">
+          <h2> Achievement tokens: </h2>
+        </div>
+        <div class="progress-icons-items">
+          <h2><% @crime.progress.times do %>
+            <%= image_tag("Youcrimelogo.jpg", size: "26x26", style: "border-radius: 50%; border: 1px white solid;") %>
+            <% end %>
+          </h2>
+        </div>
+      </div>
+      <div class="name-category-info">
+        <div class="name-category-info-item d-flex">
+          <h3 class="me-3"><%= @crime.user.username %></h3>
+          <img class="avatar-bordered" src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png" alt="profile image">
+        </div>
+        <div class="name-category-info-item">
+          <h3> <%= @crime.category %></h3>
+        </div>
+      </div>
+      <p class="card-text"><br><%= @crime.bio %></p>
       <p class="card-text">Description: <br><%= @crime.description %></p>
     </div>
     <div class="booking-box info-booking-box-item">
       <div>
-        <p>Book the crime for only <%= number_to_currency(@crime.price, unit: "€") %></p>
+        <p>Book the crime for only <%= number_to_currency(@crime.price, unit: "€", style: "font-weight: 200;") %></p>
         <%= simple_form_for [@crime_new, @booking] do |f| %>
           <%= f.input :date, label: "Choose an available date", as: :string, required: false, placeholder: 'Available dates >', input_html: { data: { controller: "booking-date"}} %>
           <%= f.submit 'Book now', class: 'btn btn-white' %>

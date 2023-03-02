@@ -1,13 +1,13 @@
 <div class="container py-5">
   <div id="crime-form">
-    <h2 class="header">add a crime</h2>
+    <h2 class="header">Add a new crime to your dashboard</h2>
     <div>
       <%= simple_form_for(@crime) do |f| %>
         <div class="form-input-flex">
           <div class="left-col">
             <div class="name-price-flex">
               <div class="name-col">
-                <%= f.input :name, required: false %>
+                <%= f.input :name, required: false, input_html: { placeholder: 'Name of your offer' } %>
               </div>
               <div class="price-col">
                 <%= f.input :price, required: false %>
@@ -19,14 +19,14 @@
                         collection_wrapper_class: 'category-wrapper',
                         item_wrapper_class: 'category-item',
                         input_html: {class: 'category-selector'},
-                        collection: %w(Murder Theft Sabotage Assault Whatever Whatever2) %>
-            <%= f.input :bio, required: false, input_html: { class: 'test2', rows: 5 } %>
+                        collection: %w(Murder Theft Sabotage Assault Kidnap Forgery) %>
+            <%= f.input :bio, required: false, input_html: { class: 'bio-field', rows: 4, placeholder: 'Short and crisp bio of your offer.' } %>
           </div>
           <div class="right-col">
-            <%= f.input :description, required: false, input_html: { class: 'test', cols: 50, rows: 15 } %>
+            <%= f.input :description, required: false, input_html: { class: 'test', cols: 50, rows: 15, placeholder: 'Give your offer a detailed description.' } %>
           </div>
         </div>
-        <%= f.submit %>
+        <%= f.submit :Add, class: 'btn btn-white crime-button' %>
       <% end %>
     </div>
   </div>

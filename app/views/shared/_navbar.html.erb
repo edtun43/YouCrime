@@ -1,8 +1,23 @@
-<div class="navbar p-3 bg-body-tertiary text-center">
-  <%= link_to 'YouCrime', crimes_path, style: 'text-decoration: none; color: white;' %>
-  <% if !current_user %>
-    <%= link_to 'Login', new_user_session_path, class: 'btn btn-white' %>
-  <% else %>
-    <%= link_to 'Logout', crimes_path, class: 'btn btn-white' %>
-  <% end %>
+<div class="navbar nav-flex-container bg-body-tertiary">
+  <div>
+    <%= link_to 'YouCrime', crimes_path, style: 'text-decoration: none; color: white; font-weight: 1000; font-size: 20px;' %>
+  </div>
+  <div class="nav-flex-menu">
+    <div class="nav-flex-menu-item">
+      <%= link_to 'Offers', crimes_path, class: 'link-menu' %>
+    </div>
+    <div class="nav-flex-menu-item">
+      <%= link_to 'Profile', crimes_path, class: 'link-menu' %>
+    </div>
+    <div class="nav-flex-menu-item">
+      <%= link_to 'Dashboard', crimes_path, class: 'link-menu' %>
+    </div>
+  </div>
+  <div>
+    <% if !current_user %>
+      <%= link_to 'Login', new_user_session_path, class: 'btn btn-white' %>
+    <% else %>
+      <%= link_to 'Logout', crimes_path, class: 'btn btn-white' %>
+    <% end %>
+  </div>
 </div>

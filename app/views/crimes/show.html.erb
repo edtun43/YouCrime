@@ -16,8 +16,11 @@
     </div>
   </div>
 
+  <%= simple_form_for [@crime_new, @booking] do |f| %>
+    <%= f.input :date %>
+    <%= f.submit 'Book now' %>
+  <% end %>
 </div>
-
 <!--
 <button class="btn btn-outline-secondary">
   <i class="fa fa-calendar"></i> Schedule

@@ -6,6 +6,9 @@ class CrimesController < ApplicationController
   end
 
   def show
+    @crime_new = Crime.find(params[:id])
+    @booking = Booking.new
+    @bookings = Booking.all
   end
 
   def new

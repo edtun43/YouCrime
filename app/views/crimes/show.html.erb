@@ -4,10 +4,15 @@
 
   <div class="info-booking-box">
     <div class="card-body info-booking-box-item" >
-      <h2>* * * * * * * * * *</h2>
-      <h2><%= @crime.user.username %></h2>
-      <h2 class="card-title text-light py-2"><%= @crime.category %></h2>
-      <p class="card-text"><%= @crime.description %></p>
+            <h2> Succesful jobs: </h2>
+      <h2><% @crime.progress.times do %>
+        <%= image_tag("Youcrimelogo.jpg", size: "30x30", style: "border-radius: 50%; border: 1px white solid;") %>
+        <% end %>
+      </h2>
+      <h2>Criminal: <%= @crime.user.username %></h2>
+      <h3 class="card-title text-light py-2">Crime category: <%= @crime.category %></h3>
+      <p class="card-text">Bio: <br><%= @crime.bio %></p>
+      <p class="card-text">Description: <br><%= @crime.description %></p>
     </div>
     <div class="booking-box info-booking-box-item">
       <div>
@@ -19,4 +24,4 @@
       </div>
     </div>
   </div>
-</div>
+ </div>

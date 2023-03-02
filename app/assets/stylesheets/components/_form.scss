@@ -140,3 +140,12 @@ input:-webkit-autofill,
  width: 200px !important;
  height: 40px !important;
 }
+
+.form-buttons {
+  display: flex;
+  justify-content: space-around;
+}
+
+.form-link-buttons {
+  display: flex;
+}

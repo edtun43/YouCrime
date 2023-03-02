@@ -27,14 +27,16 @@ Crime.create!(category: "Murder", name: "Murder all your hopes and dreams", bio:
   whatever hope and dream they have", progress: 3, description: "I can do it from the comfort of home, just give me an address, a bank account or
   whatever useful information you have on the target... and I will creatively do the rest. Any extra details you want will be
   free of charge, because I'm an asshole!", price: 10000, user: frank)
+
 Crime.create!(category: "Sabotage", name: "subtile changes that change the world", bio: "Expert sabotaging weddings, children's parties, you name it!",
   progress: 9, description: "You can tell me whatever place you want me to sneak in, I can pretend to be secret lover
   in the middle of a wedding, I can get into children's parties and steal the presents.
-  I have years of experience sabotaging people, specificallyimportant events, which are crucial for them.
-  I used to do it for fun, but you know what they say:if you do what you love,
+  I have years of experience sabotaging people, specifically important events, which are crucial for them.
+  I used to do it for fun, but you know what they say: if you do what you love,
     you won't work a single day of your life! My biggest achievement was
   sabotaging a presidential election, but I can't tell which, because of my client's privacy.
   If that doesn't tell you enough, I don't know what will! Effieciency and discretion, all in one place!", price: 3000, user: edin)
+
 Crime.create!(category: "Theft", name: "I will steal yo mama's heart", bio: "To be honest,
   I'm not very experienced in the whole 'stealing hearts' business, but I'm ready to learn!", progress: 4, description: "Are you tired
   of seeing your old lady so lonely, either sad about it or just enjoying her peace of mind? Well look no further!
@@ -42,6 +44,7 @@ Crime.create!(category: "Theft", name: "I will steal yo mama's heart", bio: "To 
   she won't know what hit her, but of course... it was cupid's arrow, right up her skirt! I actually have had success once before...
   altough she was 90 years old... and she actually stole MY heart... but I think I'm ready to apply the knowledge I learned
   from that old sexy viper grrrr.", price: 69, user: jeremy)
+
 Crime.create!(category: "Assault", name: "I will teach whoever you want a lesson", bio: "I have a lot of experience
   from playing Grand Theft Auto, so you could basically say I'm a pro.", progress: 7, description: "Do you need to
   get revenge on someone? Maybe not even revenge, but have some good ol' fashioned fun? I can do exactly that, in the form of assault,

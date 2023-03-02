@@ -1,48 +1,50 @@
 <div class="container">
-  <div class="left">
+  <div class="left border-bottom border-secondary my-5">
+    <h1>Your bookings</h1>
+    <%= link_to "book a crime", crimes_path, class: "btn btn-ghost m-4" %>
     <div class="cards">
-    <% @crimes.each do |crime|%>
-      <%= link_to crime_path(crime), style: 'text-decoration: none;' do %>
-        <div class="card-trip mb-3">
-          <%= image_tag("#{crime.category}.jpg") %>
-          <div class="card-trip-infos">
-            <div>
-              <h2><%= crime.category %></h2>
-              <p><%= crime.bio %></p>
-              <br>
-              <div class="cards-header">
-                <%= "#{crime.price}€" %>
-                <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="avatar-bordered" />
-
+      <% @bookings.each do |crime|%>
+        <%= link_to crime_path(crime), style: 'text-decoration: none;' do %>
+          <div class="card-trip mb-3">
+            <%= image_tag("#{crime.category}.jpg") %>
+            <div class="card-trip-infos">
+              <div>
+                <h2><%= crime.category %></h2>
+                <p><%= crime.bio %></p>
+                <br>
+                <div class="cards-header">
+                  <%= "#{crime.price}€" %>
+                  <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="avatar-bordered" />
+                </div>
               </div>
             </div>
-
           </div>
-        </div>
+        <% end %>
       <% end %>
-    <% end %>
+    </div>
   </div>
   <div class="right">
+    <h1>Your offers</h1>
+    <%= link_to "create a crime", new_crime_path, class: "btn btn-ghost m-4" %>
     <div class="cards">
-    <% @bookings.each do |crime|%>
-      <%= link_to crime_path(crime), style: 'text-decoration: none;' do %>
-        <div class="card-trip mb-3">
-          <%= image_tag("#{crime.category}.jpg") %>
-          <div class="card-trip-infos">
-            <div>
-              <h2><%= crime.category %></h2>
-              <p><%= crime.bio %></p>
-              <br>
-              <div class="cards-header">
-                <%= "#{crime.price}€" %>
-                <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="avatar-bordered" />
-
+      <% @crimes.each do |crime|%>
+        <%= link_to crime_path(crime), style: 'text-decoration: none;' do %>
+          <div class="card-trip mb-3">
+            <%= image_tag("#{crime.category}.jpg") %>
+            <div class="card-trip-infos">
+              <div>
+                <h2><%= crime.category %></h2>
+                <p>Created <%= crime.created_at.day - Date.new.day %> days ago</p>
+                <br>
+                <div class="badge-wrap">
+                  <p><%= "#{crime.price}€" %></p>
+                  <span class="badge">Your Crime</span>
+                </div>
               </div>
             </div>
-
           </div>
-        </div>
+        <% end %>
       <% end %>
-    <% end %>
+    </div>
   </div>
 </div>

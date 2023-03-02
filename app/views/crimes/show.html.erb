@@ -1,25 +1,37 @@
 <div class="container-card-info p-3 text-light r">
-  <div class="card-info" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1476370648495-3533f64427a2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTV8fGRhcmt8ZW58MHx8MHx8&w=1000&q=80)">
-  </div>
+  <div class="card-info" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= image_path("#{@crime.category}.jpg") %>')">  </div>
 
   <div class="d-flex">
-    <div class="card-body m-3" >
-      <h2>* * * * * * * * * *</h2>
-      <h2><%= @crime.user.username %></h2>
-      <h2 class="card-title text-light py-2"><%= @crime.category %></h2>
-      <p class="card-text"><%= @crime.description %></p>
-    </div>
-
-    <div class="booking-box p-3 my-5">
-      <p class="card-text text-light m-3"><%= number_to_currency(@crime.price, unit: "$") %></p>
-      <button class="btn btn-primary">Book now</button>
+    <div class="card-body mx-3 my-5" >
+      <h2> Succesful jobs: </h2>
+      <h2><% @crime.progress.times do %>
+        <%= image_tag("Youcrimelogo.jpg", size: "20x20", style: "border-radius: 50%;") %>
+        <% end %>
+      </h2>
+      <h2>Criminal: <%= @crime.user.username %></h2>
+      <h3 class="card-title text-light py-2">Crime category: <%= @crime.category %></h3>
+      <p class="card-text">Bio: <br><%= @crime.bio %></p>
+      <p class="card-text">Description: <br><%= @crime.description %></p>
     </div>
   </div>
 
+  <%= simple_form_for [@crime_new, @booking] do |f| %>
+    <%= f.input :date %>
+    <%= f.submit 'Book now' %>
+  <% end %>
 </div>
+
+
 
 <!--
 <button class="btn btn-outline-secondary">
   <i class="fa fa-calendar"></i> Schedule
 </button>
+-->
+
+<!--
+  <div class="booking-box p-3 my-5">
+      <p class="card-text text-light m-3"><%= number_to_currency(@crime.price, unit: "$") %></p>
+      <button class="btn btn-primary">Book now</button>
+    </div>
 -->

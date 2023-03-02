@@ -3,10 +3,14 @@
 
   <div class="d-flex">
     <div class="card-body m-3" >
-      <h2>* * * * * * * * * *</h2>
-      <h2><%= @crime.user.username %></h2>
-      <h2 class="card-title text-light py-2"><%= @crime.category %></h2>
-      <p class="card-text"><%= @crime.description %></p>
+      <h2> Succesful jobs: </h2>
+      <h2><% @crime.progress.times do %>
+        <%= "*" %>
+      <% end %></h2>
+      <h2>Criminal: <%= @crime.user.username %></h2>
+      <h3 class="card-title text-light py-2">Crime category: <%= @crime.category %></h3>
+      <p class="card-text">Bio: <br><%= @crime.bio %></p>
+      <p class="card-text">Description: <br><%= @crime.description %></p>
     </div>
 
     <div class="booking-box p-3 my-5">

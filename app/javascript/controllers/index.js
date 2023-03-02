@@ -4,5 +4,8 @@
 
 import { application } from "./application"
 
+import BookingDateController from "./booking_date_controller"
+application.register("booking-date", BookingDateController)
+
 import HelloController from "./hello_controller"
 application.register("hello", HelloController)

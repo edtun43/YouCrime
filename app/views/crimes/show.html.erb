@@ -5,8 +5,9 @@
     <div class="card-body mx-3 my-5" >
       <h2> Succesful jobs: </h2>
       <h2><% @crime.progress.times do %>
-        <%= "*" %>
-      <% end %></h2>
+        <%= image_tag("Youcrimelogo.jpg", size: "20x20", style: "border-radius: 50%;") %>
+        <% end %>
+      </h2>
       <h2>Criminal: <%= @crime.user.username %></h2>
       <h3 class="card-title text-light py-2">Crime category: <%= @crime.category %></h3>
       <p class="card-text">Bio: <br><%= @crime.bio %></p>

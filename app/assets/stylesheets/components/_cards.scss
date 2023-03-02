@@ -10,6 +10,8 @@
   width: 100%;
   color: #bdc1c6;
   border-radius: 12px;
+  height: 530px;
+  position: relative;
 }
 
 .card-trip:hover {
@@ -22,7 +24,6 @@
   width: 100%;
   // object-fit: cover;
   // // object-position: center;
-
 }
 
 .card-trip h2 {
@@ -40,11 +41,10 @@
 }
 
 .card-trip .card-trip-infos {
+  flex-grow: 1;
   padding: 16px;
   display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-  position: relative;
+  flex-direction: column;
 }
 
 // .card-trip-infos .card-trip-user {
@@ -57,6 +57,16 @@
 .cards-header {
   display: flex;
   justify-content: space-between;
+}
+
+.cards-footer {
+  margin-top: auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.test {
+  width: 100%;
 }
 
 // Smallest device

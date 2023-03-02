@@ -8,20 +8,18 @@
   <div class="cards">
     <% @crimes.each do |crime|%>
       <%= link_to crime_path(crime), style: 'text-decoration: none;' do %>
-        <div class="card-trip mb-3">
+        <div class="card-trip d-flex flex-column mb-3">
           <%= image_tag("#{crime.category}.jpg") %>
           <div class="card-trip-infos">
-            <div>
-              <h2><%= crime.category %></h2>
-              <p><%= crime.bio %></p>
-              <br>
-              <div class="cards-header">
-                <%= "#{crime.price}€" %>
-                <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="avatar-bordered" />
-
-              </div>
+            <h2><%= crime.category %></h2>
+            <br>
+            <h5><%= crime.name %></h5>
+            <p><%= crime.bio %></p>
+            <br>
+            <div class="cards-footer">
+              <%= "#{crime.price}€" %>
+              <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="avatar-bordered" />
             </div>
-
           </div>
         </div>
       <% end %>

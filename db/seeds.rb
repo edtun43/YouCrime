@@ -20,8 +20,6 @@ zinedine = User.create!(email: "almostworldchampiontwice@gangstermail.com", pass
 berta = User.create!(email: "al-berta@gangstermail.com", password: "password", username: "Berta la corta-bertas")
 yeibor = User.create!(email: "yeibor@gangstermail.com", password: "password", username: "Type in anything, no, don't type that!")
 
-
-
 Crime.create!(category: "Murder", name: "Murder all your hopes and dreams", bio: "In the streets they call me
   ...nothing...because I'm too busy getting into other's peoples lifes, specfically the person you choose to destroy
   whatever hope and dream they have", progress: 3, description: "I can do it from the comfort of home, just give me an address, a bank account or
@@ -71,6 +69,5 @@ Crime.create!(category: "Assault", name: "I will beat up Materazzi", bio: "World
 Crime.create!(category: "Theft", name: "I will still your man", bio: "They call me Stacy, they call me her, but I'm actually Berta.", progress: 9, description: "I'm not giving you any details! This is just a warning!", price: 2, user: berta)
 
 Crime.create!(category: "Forgery", name: "Testing if the app is real", bio: "I just wanna see if this site actually works", progress: 1, description: "Hello everybody, can anyone explain how this works? Am I doing this right? Thank you in advance!", price: 1, user: yeibor)
-
 
 puts "created seeds"

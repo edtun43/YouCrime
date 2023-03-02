@@ -10,7 +10,9 @@
       <%= link_to 'Profile', crimes_path, class: 'link-menu' %>
     </div>
     <div class="nav-flex-menu-item">
-      <%= link_to 'Dashboard', bookings_path, class: 'link-menu' %>
+    <% if current_user %>
+        <%= link_to 'Dashboard', bookings_path, class: 'link-menu' %>
+    <% end %>
     </div>
   </div>
   <div>

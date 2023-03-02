@@ -2,6 +2,8 @@
   width: 800px;
   margin: 0 auto;
   background-color: #0E1012;
+  font-size: 16px;
+  font-weight: bold;
   border-radius: 8px;
   padding: 10px 40px 10px;
   // box-shadow: 1px 4px 10px 1px #aaa;
@@ -18,6 +20,7 @@
 #crime-form h2{
   text-align: center;
   margin-bottom: 30px;
+  font-size: 50px;
 }
 
 #crime-form input {
@@ -34,11 +37,12 @@
   color: white;
 }
 
-// .right-col input {
-//   border: 0.5px solid #ffffff;
-//   background-color: #0E1012;
-//   color: white;
-// }
+#bio-field {
+  // height: 97px !important;
+  margin-top: 12px;
+  columns: 50;
+}
+
 
 .form-control {
   border: 0.5px solid #ffffff;
@@ -48,56 +52,24 @@
   &:focus {
     background-color: #0E1012;
     color: white;
+    border-color: #ffffff;
+    box-shadow: 0 0 0 0.15rem rgba(255, 255, 255, 0.25);
   }
 }
+
+// This solution (trick) is from StackOverflow
+input:-webkit-autofill,
+  input:-webkit-autofill:focus {
+    transition: background-color 600000s 0s, color 600000s 0s;
+  }
 
 #crime-form label {
   color: #ffffff;
   font-size: 0.8em;
-  padding-top: 20px;
+  // padding-top: 20px;
 }
-
-select {
-  margin-bottom: 10px;
-}
-
-// .my-class {
-//   position: absolute;
-//   transform: scale(0);
-// }
-
-// .category-item {
-//   display: inline-block;
-// }
-
-// .category-selector {
-//   position: absolute;
-//   transform: scale(0);
-// }
-
-// .category-selector + label {
-//   cursor: pointer;
-//   display: inline-block;
-//   font-size: 0.7rem;
-//   border-radius: 50rem;
-//   padding: 0.1rem 0.5rem;
-//   background-color: #ECEAFF;
-//   color: #7E73FF;
-//   border: 1px solid #7E73FF;
-//   margin-right: 0.6rem;
-//   margin-bottom: 0.4rem;
-// }
-
-// .category-selector:checked + label {
-//   background-color: #7E73FF;
-//   color: white;
-// }
 
 .category-wrapper {
-  // display: grid;
-  // grid-template-columns: 1fr 1fr 1fr;
-  // grid-template-rows: auto;
-  // grid-gap: 16px;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
@@ -105,7 +77,7 @@ select {
 
 .category-item {
   flex: 0 0 30%;
-  margin-bottom: 12px;
+  margin-top: 12px; ///////
 }
 
 .category-selector {
@@ -120,11 +92,18 @@ select {
   width: 100%;
   font-size: 12px;
   text-align: left;
-  padding: 10px 10px 30px 10px;
+  padding: 20px 10px 20px 10px;
   border: 0.5px solid #ffffff;
   border-radius: 4px;
   background-color: #0E1012;
   text-align: center;
+}
+
+.col-form-label {
+  font-size: 12px;
+  font-weight: bold;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 .category-selector:checked + label {
@@ -157,31 +136,7 @@ select {
   flex: 0 30%;
 }
 
-// #snippet_category_ruby + label {
-//   color: #FD1015;
-// }
-
-// #snippet_category_ruby:checked + label {
-//   background-color: #FD1015;
-//   border-color: #FD1015;
-// }
-
-
-// #snippet_category_javascript + label {
-//   color: #FFC65A;
-// }
-
-// #snippet_category_javascript:checked + label {
-//   background-color: #FFC65A;
-//   border-color: #FFC65A;
-// }
-
-
-// #snippet_category_css + label {
-//   color: #62DDF5;
-// }
-
-// #snippet_category_css:checked + label {
-//   background-color: #62DDF5;
-//   border-color: #62DDF5;
-// }
+.crime-button {
+ width: 200px !important;
+ height: 40px !important;
+}

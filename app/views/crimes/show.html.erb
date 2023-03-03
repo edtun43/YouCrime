@@ -31,12 +31,18 @@
     </div>
     <div class="booking-box info-booking-box-item">
       <div>
-        <p>Book the crime for only <%= number_to_currency(@crime.price, unit: "€", style: "font-weight: 200;") %></p>
-        <%= simple_form_for [@crime_new, @booking], data: { controller: "booking-date", "booking-date-booked-value": @crime.user.booked_days } do |f| %>
-          <%= f.input :date, label: "Choose an available date", as: :string, required: false, placeholder: 'Available dates >', input_html: { data: { "booking-date-target": "input" } } %>
-          <%= f.submit 'Book now', class: 'btn btn-white' %>
+         <% if current_user %>
+          <p>Book the crime for only <%= number_to_currency(@crime.price, unit: "€", style: "font-weight: 200;") %></p>
+          <%= simple_form_for [@crime_new, @booking], data: { controller: "booking-date", "booking-date-booked-value": @crime.user.booked_days } do |f| %>
+            <%= f.input :date, label: "Choose an available date", as: :string, required: false, placeholder: 'Available dates >', input_html: { data: { "booking-date-target": "input" } } %>
+            <%= f.submit 'Book now', class: 'btn btn-white' %>
+          <% end %>
+        <% else %>
+          <p>You must be logged in to book a crime</p>
+          <br>
+          <%= link_to 'Login', new_user_session_path, class: 'btn btn-white' %>
         <% end %>
       </div>
     </div>
   </div>
- </div>
+</div>

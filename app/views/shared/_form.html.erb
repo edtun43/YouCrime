@@ -20,10 +20,10 @@
                         item_wrapper_class: 'category-item',
                         input_html: {class: 'category-selector'},
                         collection: %w(Murder Theft Sabotage Assault Kidnap Forgery) %>
-            <%= f.input :bio, required: false, input_html: { class: 'bio-field', rows: 4, placeholder: 'Short and crisp bio of your offer.' } %>
+            <%= f.input :bio, as: :text, required: false, input_html: { class: 'bio-field', rows: 4, placeholder: 'Short and crisp bio of your offer.' } %>
           </div>
           <div class="right-col">
-            <%= f.input :description, required: false, input_html: { class: 'test', cols: 50, rows: 15, placeholder: 'Give your offer a detailed description.' } %>
+            <%= f.input :description, as: :text, required: false, input_html: { class: 'test', cols: 50, rows: 15, placeholder: 'Give your offer a detailed description.' } %>
           </div>
         </div>
         <%= f.submit :Add, class: 'btn btn-white crime-button' %>

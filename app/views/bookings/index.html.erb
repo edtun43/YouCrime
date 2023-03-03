@@ -10,9 +10,9 @@
             <div class="card-trip-infos">
               <div>
                 <h2><%= booking.crime.category %></h2>
-                <p> Created <%= booking.crime.created_at.day - Date.new.day %> <%= "day".pluralize(booking.crime.created_at.day - Date.new.day) %> ago</p>
+                <p> Created <%= booking.crime.created_at.day - Date.today.day %> <%= "day".pluralize(booking.crime.created_at.day - Date.new.day) %> ago</p>
                 <br>
-                <p> will be executed in <%= booking.date.day - Date.new.day %> <%= "day".pluralize(booking.date.day - Date.new.day) %></p>
+                <p> will be executed in <%= booking.date.day - Date.today.day %> <%= "day".pluralize(booking.date.day - Date.new.day) %></p>
                 <br>
                 <div class="cards-header">
                   <%= "#{booking.crime.price}€" %>
@@ -36,7 +36,7 @@
             <div class="card-trip-infos">
               <div>
                 <h2><%= crime.category %></h2>
-                <p> Created <%= crime.created_at.day - Date.new.day %> <%= "day".pluralize(crime.created_at.day - Date.new.day) %> ago</p>
+                <p> Created <%= crime.created_at.day - Date.today.day %> <%= "day".pluralize(crime.created_at.day - Date.new.day) %> ago</p>
                 <br>
                 <div class="badge-wrap">
                   <p><%= "#{crime.price}€" %></p>

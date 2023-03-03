@@ -1,3 +1,13 @@
 .box {
-  inline-size: 70%;
+  inline-size: 60%;
+  padding-right: 80px;
+}
+
+.pictures{
+  display: flex;
+  flex-direction: column;
+}
+
+.wrapper {
+  display: flex;
 }

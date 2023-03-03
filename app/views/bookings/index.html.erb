@@ -3,17 +3,19 @@
     <h1>Your bookings</h1>
     <%= link_to "book a crime", crimes_path, class: "btn btn-ghost m-4" %>
     <div class="cards">
-      <% @bookings.each do |crime|%>
-        <%= link_to crime_path(crime), style: 'text-decoration: none;' do %>
+      <% @bookings.each do |booking|%>
+        <%= link_to crime_path(booking.crime), style: 'text-decoration: none;' do %>
           <div class="card-trip mb-3">
-            <%= image_tag("#{crime.category}.jpg") %>
+            <%= image_tag("#{booking.crime.category}.jpg") %>
             <div class="card-trip-infos">
               <div>
-                <h2><%= crime.category %></h2>
-                <p><%= crime.bio %></p>
+                <h2><%= booking.crime.category %></h2>
+                <p> Created <%= booking.crime.created_at.day - Date.new.day %> <%= "day".pluralize(booking.crime.created_at.day - Date.new.day) %> ago</p>
+                <br>
+                <p> will be executed in <%= booking.date.day - Date.new.day %> <%= "day".pluralize(booking.date.day - Date.new.day) %></p>
                 <br>
                 <div class="cards-header">
-                  <%= "#{crime.price}€" %>
+                  <%= "#{booking.crime.price}€" %>
                   <img src="https://www.google.de/url?sa=i&url=https%3A%2F%2Fpixabay.com%2Fde%2Fvectors%2Fleeres-profilbild-mysteri%25C3%25B6ser-mann-973460%2F&psig=AOvVaw2eGiv1Q4tJbpPuMO5rgvtk&ust=1677861292399000&source=images&cd=vfe&ved=0CBAQjRxqFwoTCLD0ysvWvf0CFQAAAAAdAAAAABAD" class="avatar-bordered" />
                 </div>
               </div>
@@ -34,7 +36,7 @@
             <div class="card-trip-infos">
               <div>
                 <h2><%= crime.category %></h2>
-                <p>Created <%= crime.created_at.day - Date.new.day %> days ago</p>
+                <p> Created <%= crime.created_at.day - Date.new.day %> <%= "day".pluralize(crime.created_at.day - Date.new.day) %> ago</p>
                 <br>
                 <div class="badge-wrap">
                   <p><%= "#{crime.price}€" %></p>

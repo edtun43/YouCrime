@@ -24,15 +24,17 @@
           <h3> <%= @crime.category %></h3>
         </div>
       </div>
-      <p class="card-text"><br><%= @crime.bio %></p>
-      <p class="card-text">Description: <br><%= @crime.description %></p>
+      <div class="info-text-box">
+        <p class="card-text"><br><%= @crime.bio %></p>
+        <p class="card-text">Further description<br><%= @crime.description %></p>
+      </div>
     </div>
     <div class="booking-box info-booking-box-item">
       <div>
-        <% if current_user %>
+         <% if current_user %>
           <p>Book the crime for only <%= number_to_currency(@crime.price, unit: "€", style: "font-weight: 200;") %></p>
-          <%= simple_form_for [@crime_new, @booking] do |f| %>
-            <%= f.input :date, label: "Choose an available date", as: :string, required: false, placeholder: 'Available dates >', input_html: { data: { controller: "booking-date"}} %>
+          <%= simple_form_for [@crime_new, @booking], data: { controller: "booking-date", "booking-date-booked-value": @crime.user.booked_days } do |f| %>
+            <%= f.input :date, label: "Choose an available date", as: :string, required: false, placeholder: 'Available dates >', input_html: { data: { "booking-date-target": "input" } } %>
             <%= f.submit 'Book now', class: 'btn btn-white' %>
           <% end %>
         <% else %>

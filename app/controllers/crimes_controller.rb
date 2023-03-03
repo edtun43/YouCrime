@@ -17,6 +17,7 @@ class CrimesController < ApplicationController
 
   def create
     @crime = Crime.new(crime_params)
+    @crime.progress = 1 if @crime.progress.nil?
     @crime.user = current_user
 
     if @crime.save

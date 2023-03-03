@@ -4,14 +4,15 @@
     <%= link_to "book a crime", crimes_path, class: "btn btn-ghost m-4" %>
     <div class="cards">
       <% @bookings.each do |booking|%>
-        <p><%= booking.crime.name %></p>
         <%= link_to crime_path(booking.crime), style: 'text-decoration: none;' do %>
           <div class="card-trip mb-3">
             <%= image_tag("#{booking.crime.category}.jpg") %>
             <div class="card-trip-infos">
               <div>
                 <h2><%= booking.crime.category %></h2>
-                <p><%= booking.crime.bio %></p>
+                <p> Created <%= booking.crime.created_at.day - Date.new.day %> <%= "day".pluralize(booking.crime.created_at.day - Date.new.day) %> ago</p>
+                <br>
+                <p> will be executed in <%= booking.date.day - Date.new.day %> <%= "day".pluralize(booking.date.day - Date.new.day) %></p>
                 <br>
                 <div class="cards-header">
                   <%= "#{booking.crime.price}€" %>
@@ -35,7 +36,7 @@
             <div class="card-trip-infos">
               <div>
                 <h2><%= crime.category %></h2>
-                <p>Created <%= crime.created_at.day - Date.new.day %> days ago</p>
+                <p> Created <%= crime.created_at.day - Date.new.day %> <%= "day".pluralize(crime.created_at.day - Date.new.day) %> ago</p>
                 <br>
                 <div class="badge-wrap">
                   <p><%= "#{crime.price}€" %></p>

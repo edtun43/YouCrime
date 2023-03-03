@@ -32,8 +32,8 @@
     <div class="booking-box info-booking-box-item">
       <div>
         <p>Book the crime for only <%= number_to_currency(@crime.price, unit: "€", style: "font-weight: 200;") %></p>
-        <%= simple_form_for [@crime_new, @booking], data: { controller: "booking-date", action: "submit->booking-date#blacklist", "booking-date-booked-value": @crime.user.booked_days } do |f| %>
-          <%= f.input :date, label: "Choose an available date", as: :string, required: false, placeholder: 'Available dates >' %>
+        <%= simple_form_for [@crime_new, @booking], data: { controller: "booking-date", "booking-date-booked-value": @crime.user.booked_days } do |f| %>
+          <%= f.input :date, label: "Choose an available date", as: :string, required: false, placeholder: 'Available dates >', input_html: { data: { "booking-date-target": "input" } } %>
           <%= f.submit 'Book now', class: 'btn btn-white' %>
         <% end %>
       </div>

@@ -3,14 +3,14 @@ class BookingsController < ApplicationController
     @crimes = Crime.where(user: current_user)
     @bookings = Booking.where(user: current_user)
   end
-  
+
   def create
     @booking = Booking.new(booking_params)
     @booking.user = current_user
     @booking.crime_id = params[:crime_id]
 
     if @booking.save
-      redirect_to crime_path(params[:crime_id])
+      redirect_to bookings_path
     else
       render :new, status: :unprocessable_entity
     end

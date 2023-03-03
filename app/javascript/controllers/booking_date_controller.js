@@ -3,14 +3,19 @@ import flatpickr from "flatpickr";
 
 // Connects to data-controller="booking-date"
 export default class extends Controller {
-  connect() {
-    const config = {
-      enableTime: true,
-      dateFormat: "Y-m-d H:i",
-      // minDate: "today"
-    }
-    flatpickr(this.element, { config });
+  static values = { booked: Array }
 
-    console.log(this.element.children);
+  connect() {
+    this.config = {
+      disable: this.bookedValue,
+      minDate: "today"
+    }
+    flatpickr(this.element, this.config);
+  }
+
+  blacklist(event) {
+    event.preventDefault();
+    this.config.disable = [`${this.element.value}`];
+    flatpickr(this.element, this.config);
   }
 }

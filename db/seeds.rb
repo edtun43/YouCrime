@@ -18,7 +18,21 @@ zelda = User.create!(email: "zelda@gangstermail.com", password: "password", user
 antonio = User.create!(email: "antoniobanderas@gangstermail.com", password: "password", username: "El Zorro")
 zinedine = User.create!(email: "almostworldchampiontwice@gangstermail.com", password: "password", username: "Zidane")
 berta = User.create!(email: "al-berta@gangstermail.com", password: "password", username: "Berta la corta-bertas")
-yeibor = User.create!(email: "yeibor@gangstermail.com", password: "password", username: "Type in anything, no, don't type that!")
+yeibor = User.create!(email: "yeibor@gangstermail.com", password: "password", username: "Type in anything")
+
+lucas = User.create!(email: "lucas@theprankster.com", password: "password", username: "JokerOfSpades")
+emma = User.create!(email: "emma@thiefmail.com", password: "password", username: "The Artful Dodger")
+george = User.create!(email: "george@banditmail.com", password: "password", username: "SlyThief")
+mia = User.create!(email: "mia@pandemicmail.com", password: "password", username: "TheMaskedMarauder")
+noah = User.create!(email: "noah@spy.com", password: "password", username: "SecretAgentNoah")
+isabella = User.create!(email: "isabella@scammermail.com", password: "password", username: "The Smooth Operator")
+ethan = User.create!(email: "ethan@fakemail.com", password: "password", username: "TheChameleon")
+olivia = User.create!(email: "olivia@thiefmail.com", password: "password", username: "SilentShadow")
+william = User.create!(email: "william@robbermail.com", password: "password", username: "GentlemanThiefWill")
+harper = User.create!(email: "harper@heistmail.com", password: "password", username: "MastermindHarper")
+
+
+
 
 Crime.create!(category: "Murder", name: "I will get rid of the bad guys", bio: "Lots and lots of experience, mostly playing roles in movies, but how different could it be in real life?", progress: 2, description: "Ah yes, it is me,
   you know who, I will go to my storage room, get my hat and my mask, I will actually take my real sword and get into any alley
@@ -69,5 +83,31 @@ Crime.create!(category: "Murder", name: "Murder all your hopes and dreams", bio:
   free of charge, because I'm an asshole!", price: 10000, user: frank)
 
 Crime.create!(category: "Forgery", name: "Testing if the app is real", bio: "I just wanna see if this site actually works", progress: 1, description: "Hello everybody, can anyone explain how this works? Am I doing this right? Thank you in advance!", price: 1, user: yeibor)
+
+Crime.create!(category: "Murder", name: "Assassin for hire", bio: "I'm a professional hitman with a perfect record", progress: 10, description: "Need someone taken care of permanently? I'm your guy. I'm a professional hitman with a perfect record. I've taken out politicians, businessmen, and even rival gang leaders. No job is too big or too small. But be warned, I don't come cheap.", price: 50000, user: harper)
+
+Crime.create!(category: "Theft", name: "Jewelry heist specialist", bio: "I'm the best in the business when it comes to stealing jewelry", progress: 8, description: "Need a priceless diamond necklace or a rare antique ring stolen? Look no further. I'm the best in the business when it comes to stealing jewelry. I've successfully pulled off countless heists and have never been caught. But remember, quality work comes at a premium price.", price: 15000, user: william)
+
+Crime.create!(category: "Sabotage", name: "Corporate espionage expert", bio: "I've spent years infiltrating companies and stealing their secrets", progress: 9, description: "Are you tired of playing second fiddle to your competitors? Want to level the playing field? Hire me as your corporate espionage expert. I've spent years infiltrating companies and stealing their secrets. I've planted bugs, hacked into servers, and even seduced executives to get the information I need. Whatever it takes to get the job done, I'll do it. But be prepared to pay top dollar for my services.", price: 25000, user: noah)
+
+Crime.create!(category: "Murder", name: "The Plant Assassin", bio: "I'm a botanist gone rogue", progress: 4, description: "Are you tired of your plants getting more attention than you? Hire me to take care of them. I'm a botanist gone rogue and I know all the tricks to get rid of any plant, whether it's a pesky houseplant or an entire garden. My methods are a little unorthodox, but they get the job done. Just don't ask too many questions.", price: 200, user: mia)
+
+Crime.create!(category: "Forgery", name: "The Artistic Forger", bio: "I'm a terrible artist, but a great forger", progress: 6, description: "Need a Picasso or a Van Gogh? I can make it happen. I'm a terrible artist, but a great forger. I can copy any painting, and my forgeries are so good even art experts can't tell the difference. Just don't ask me to paint anything original, because that's where things get tricky.", price: 1000, user: ethan)
+
+Crime.create!(category: "Theft", name: "The Office Bandit", bio: "I'm a master of office theft", progress: 8, description: "Do you need some office supplies? Maybe a stapler or a few pens? I'm your guy. I'm a master of office theft and I can get you whatever you need. Just tell me what you want, and I'll make it happen. And if you're feeling really adventurous, I can even steal the boss's chair.", price: 500, user: george)
+
+Crime.create!(category: "Assault", name: "The Prankster", bio: "I'm all about harmless pranks", progress: 3, description: "Do you need to get back at someone, but don't want to hurt them? Hire me for a harmless prank. I can do everything from filling their office with balloons to putting googly eyes on all their pictures. Just tell me what you have in mind, and I'll make it happen.", price: 50, user: lucas)
+
+Crime.create!(category: "Forgery", name: "I will forge any document", bio: "I've been forging documents for years, not even I can tell the difference", progress: 6, description: "Need a fake ID? A forged passport? A fake degree? Look no further! I'm your guy. I've been forging documents for years and I've never been caught. My forgeries are so good, even I can't tell them apart from the real ones. Just tell me what you need and I'll make it happen.", price: 500, user: isabella)
+
+Crime.create!(category: "Kidnap", name: "Kidnap for ransom", bio: "I've successfully carried out multiple kidnappings for ransom", progress: 8, description: "Need someone kidnapped for ransom? I'm your guy. I've successfully carried out multiple kidnappings and I know all the tricks of the trade. I can get you the ransom money you need in no time. Of course, this isn't something I do for fun, so the price will be high. But if you're serious about getting someone kidnapped, I'm serious about making it happen.", price: 10000, user: emma)
+
+Crime.create!(category: "Assault", name: "I'll beat up anyone for you", bio: "I've been in more fights than I can count", progress: 5, description: "Do you need someone taken care of? Someone who's been bothering you? Someone who owes you money? I'll beat them up for you. I've been in more fights than I can count, and I've won most of them. I know how to hurt people without leaving a trace. Just give me their name and their schedule, and I'll take care of the rest.", price: 1000, user: julia)
+
+Crime.create!(category: "Theft", name: "I'll steal anything you want", bio: "I'm a professional thief, nothing is safe from me", progress: 9, description: "Do you need something stolen? Jewelry? Money? Art? I'll steal it for you. I'm a professional thief, and I've never been caught. I know all the tricks of the trade and I have all the tools I need. Just tell me what you want stolen, and I'll make it happen. But remember, this isn't something I do for fun, so the price will be high.", price: 5000, user: emma)
+
+Crime.create!(category: "Forgery", name: "I'll falsify any record", bio: "I'm an expert at forging all kinds of documents", progress: 6, description: "Need a fake birth certificate? A forged driver's license? A phony marriage certificate? I'm your guy. I'm an expert at forging all kinds of documents, and I've never been caught. Just give me the details of what you need, and I'll make it happen. But be prepared to pay a high price, because I don't do this kind of work for cheap.", price: 7500, user: olivia)
+
+Crime.create!(category: "Kidnap", name: "Kidnap and deliver", bio: "I'm a skilled kidnapper, and I know how to get the job done", progress: 6, description: "Do you need someone kidnapped and delivered to a specific location? I'm your guy. I'm a skilled kidnapper, and I know how to get the job done.",  price: 4200, user: olivia)
 
 puts "created seeds"
